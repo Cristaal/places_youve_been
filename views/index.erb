@@ -1,0 +1,19 @@
+<h1>Where Have You Been?</h1>
+
+<p>Type A Place You've Been:</p>
+
+<ul>
+  <% @places.each() do |place| %>
+    <li><%= place.locale() %></li>
+  <% end %>
+</ul>
+
+
+<p> Create a new task:</p>
+
+<form action="/places_youve_been" method="post">
+  <label for "locale">A Place You've Been</label>
+  <input id="locale" name="locale" type="text">
+
+  <button type="submit">Add Place</button>
+</form>
