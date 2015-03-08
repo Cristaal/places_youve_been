@@ -1,23 +1,23 @@
 class Places
   @@all_places = []
 
-  define_method(:initialize) do |locale|
+  def initialize(locale)
     @locale = locale
   end
 
-  define_method(:locale) do
+  def locale
     @locale
   end
 
-  define_singleton_method(:all) do
+  def self.all
     @@all_places
   end
 
-  define_method(:save) do
+  def save
     @@all_places.push(self)
   end
 
-  define_singleton_method(:clear) do
+  def self.clear
    @@all_places = []
   end
 end
